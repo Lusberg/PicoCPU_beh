@@ -1,10 +1,9 @@
 # PicoCPU
-
 Flags are broken + other bugs.
-Successfully executes InstMem instructions.
+Successfully executes InstMem instructions (shown by PC_output (program counter)).
 
 Result of Behavioral PicoCPU:
-![](/lab4.png?raw=true)
+![](/lab3_PC_res.png?raw=true)
 
 Comparisson to official RTL PicoCPU:
-![](/lab5.png?raw=true)
+![](/lab4_res.png?raw=true)

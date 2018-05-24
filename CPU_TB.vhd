@@ -13,6 +13,7 @@ architecture Behavioral of CPU_TB is
 component CPU is
     port    ( clk               : in std_logic;
               rst               : in std_logic;
+              PC_output         : out std_logic_vector (7 downto 0);
               ACC_output        : out std_logic_vector (7 downto 0);
               Flag_output       : out std_logic_vector (3 downto 0)
 );
@@ -21,6 +22,7 @@ end component;
 constant clk_period             : time      := 10 ns;
 signal clk                      : std_logic := '0';
 signal rst                      : std_logic;
+signal PC_output                : std_logic_vector (7 downto 0);
 signal ACC_output               : std_logic_vector (7 downto 0);
 signal Flag_output              : std_logic_vector (3 downto 0);
 
@@ -29,6 +31,7 @@ begin
 UUT : CPU
     port map ( clk => clk,
                rst => rst,
+               PC_output => PC_output,
                ACC_output => ACC_output,
                Flag_output => Flag_output
 );

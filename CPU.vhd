@@ -7,6 +7,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity CPU is
     port    ( clk               : in std_logic;
               rst               : in std_logic;
+              PC_output         : out std_logic_vector (7 downto 0);
               ACC_output        : out std_logic_vector (7 downto 0);
               Flag_output       : out std_logic_vector (3 downto 0)
 );
@@ -364,6 +365,7 @@ case Instr is
     when others         =>
 end case;
 PC <= Next_PC;
+PC_output <= PC;
 
 end process;
 end Behavioral;
